@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <widget class="QWidget" name="playlistTab">
+       <attribute name="title">
+        <string>Playlist</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="playlistLayout">
+        <item>
+         <widget class="QLabel" name="albumArtLabel">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>250</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="playlistView"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="libraryTab">
+       <attribute name="title">
+        <string>Bibliothèque</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="libraryLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="addToLibraryButton">
+            <property name="text">
+             <string>Ajouter des fichiers</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="resetLibraryButton">
+            <property name="text">
+             <string>Réinitialiser la bibliothèque</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="searchLineEdit">
+          <property name="placeholderText">
+           <string>Rechercher...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="libraryView"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="controlsLayout">
+      <item>
+       <layout class="QHBoxLayout" name="timeLayout">
+        <item>
+         <widget class="QLabel" name="currentTimeLabel">
+          <property name="text">
+           <string>00:00</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="progressSlider">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="totalTimeLabel">
+          <property name="text">
+           <string>00:00</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="buttonLayout">
+        <item>
+         <widget class="QPushButton" name="previousButton"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="playButton"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopButton"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="nextButton"/>
+        </item>
+         <item>
+         <widget class="QPushButton" name="shuffleButton"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="volumeLowLabel">
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="volumeSlider">
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>50</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="volumeHighLabel">
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+</ui>
